@@ -14,7 +14,7 @@ def get_note_by_id(note_id):
     return note_schema.dump(note), 200
 
 
-@app.route("/notes", methods=["GET"])
+@app.route("/notes")
 @multi_auth.login_required
 def get_notes():
     # TODO: авторизованный пользователь получает только свои заметки и публичные заметки других пользователей
